@@ -1,6 +1,7 @@
 import pytesseract
 import time
 import telepot
+import telepot.exception
 from telepot.loop import MessageLoop
 from PIL import Image
 
@@ -14,9 +15,13 @@ pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 def getimg():
     img = Image.open('imgs/foto.jpg')
-    imgtext = pytesseract.image_to_string(img)
-    print(imgtext)
-    bot.sendMessage(chat_id, imgtext)
+    try:
+        imgtext = pytesseract.image_to_string(img)
+        print(imgtext)
+        bot.sendMessage(chat_id, imgtext)
+    except telepot.exception.TelegramError:
+        bot.sendMessage(chat_id, 'Desculpe, imagem não reconhecida... tente novamente..')
+
 
 
 
