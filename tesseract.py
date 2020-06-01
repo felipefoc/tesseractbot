@@ -8,7 +8,8 @@ from PIL import Image
 
 bot = telepot.Bot('1068379297:AAFcBAn9q1hBt25gHguBJ1Ay2-3uJuhZrQ8')
 chat = '1068379297'
-pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+# local : pytesseract.pytesseract.tesseract_cmd = 'C:/Program Files/Tesseract-OCR/tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
 
 def getimg():
