@@ -30,7 +30,7 @@ def handle(msg):
         print('Foto recebida com sucesso... ID: ', photo)
         bot.sendMessage(chat_id, 'Foto recebida, analisando')
         x = bot.getFile(photo)['file_id']
-        bot.download_file(x, 'C:\\Projects\\Tesseract\\imgs\\foto.jpg')
+        bot.download_file(x, 'imgs/foto.jpg')
         time.sleep(2)
         getimg()
 
