@@ -9,7 +9,7 @@ import cv2
 
 # TelegramBOT
 
-bot = telepot.Bot('1068379297:AAFcBAn9q1hBt25gHguBJ1Ay2-3uJuhZrQ8')
+bot = telepot.Bot('1068379297:AAGPrgcBsciI-aGWUbTXfMOFqLO92rOpCYk')
 chat = '1068379297'
 
 pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
