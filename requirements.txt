@@ -1,5 +1,5 @@
 telepot==12.7
-urllib3==1.25.9
+urllib3==1.26.5
 yarl ==1.4.2
 aiohttp==3.6.2
 asgiref==3.2.7
